@@ -13,7 +13,7 @@ public class Run {
     private void run()
     {
         UserList list = new UserList();
-        String saveDir = "Contacts.alulc";
+        String saveDir = "Contacts";
 
         list.LoadUserList(saveDir);
         CommandInput input = new CommandInput();

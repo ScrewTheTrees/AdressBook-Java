@@ -30,7 +30,6 @@ public class Contact implements Serializable {
     //Getter Setters
     public String GetFirstName() { return this.firstName; }
     public String GetLastName() { return this.lastName; }
-    public String GetEMail() { return this.eMail; }
 
 
 }
