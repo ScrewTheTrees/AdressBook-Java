@@ -40,20 +40,14 @@ public class UserList {
 
     public void SaveUserList(String dir)
     {
-        File folder = new File("Contacts");
-        if (!folder.exists()) {
-            folder.mkdir();
-        }
 
         try {
-            for (int i = 0; i < userList.size(); i++) {
-                FileOutputStream fileOut = new FileOutputStream(dir+"/"+i+".cont");
+                FileOutputStream fileOut = new FileOutputStream(dir);
                 ObjectOutputStream out = new ObjectOutputStream(fileOut);
-                out.writeObject(userList.get(i));
+                out.writeObject(userList);
                 out.close();
                 fileOut.close();
-            }
-        }catch(IOException i) {
+        } catch (IOException i) {
             i.printStackTrace();
         }
     }
@@ -61,32 +55,26 @@ public class UserList {
 
     public void LoadUserList(String dir) {
 
-        File folder = new File(dir);
+        File file = new File(dir);
 
-        if (folder.exists()) {
+        if (file.exists()) {
+            try {
+                FileInputStream fileIn = new FileInputStream(file);
+                ObjectInputStream in = new ObjectInputStream(fileIn);
+                ArrayList<Contact> cont = (ArrayList<Contact>) in.readObject();
+                userList = cont;
 
-            File[] listOfFiles = folder.listFiles();
+                in.close();
+                fileIn.close();
 
-            for (File listOfFile : listOfFiles) {
-                if (listOfFile.isFile()) {
-                    try {
-                        FileInputStream fileIn = new FileInputStream(listOfFile);
-                        ObjectInputStream in = new ObjectInputStream(fileIn);
-                        Contact cont = (Contact) in.readObject();
-                        userList.add(cont);
-                        in.close();
-                        fileIn.close();
-
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (ClassNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        }
 
+        }
     }
 }
