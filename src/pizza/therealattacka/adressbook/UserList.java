@@ -28,7 +28,8 @@ public class UserList {
 
     public void printSearch(String input1)
     {
-        for (int i=0; i<userList.size(); i++){
+        for (int i=0; i<userList.size(); i++)
+        {
             Contact cont = userList.get(i);
             String firstLower = cont.GetFirstName().toLowerCase();
             String lastLower = cont.GetLastName().toLowerCase();
@@ -46,34 +47,39 @@ public class UserList {
     public void SaveUserList(String dir)
     {
         File folder = new File("Contacts");
-        if (!folder.exists()) {
+        if (!folder.exists())
+        {
             folder.mkdir();
         }
 
         try {
-            for (int i = 0; i < userList.size(); i++) {
+            for (int i = 0; i < userList.size(); i++)
+            {
                 FileOutputStream fileOut = new FileOutputStream(dir+"/"+i+".cont");
                 ObjectOutputStream out = new ObjectOutputStream(fileOut);
                 out.writeObject(userList.get(i));
                 out.close();
                 fileOut.close();
             }
-        }catch(IOException i) {
+        } catch(IOException i) {
             i.printStackTrace();
         }
     }
 
 
-    public void LoadUserList(String dir) {
+    public void LoadUserList(String dir)
+    {
 
         File folder = new File(dir);
 
-        if (folder.exists()) {
-
+        if (folder.exists())
+        {
             File[] listOfFiles = folder.listFiles();
 
-            for (File listOfFile : listOfFiles) {
-                if (listOfFile.isFile()) {
+            for (File listOfFile : listOfFiles)
+            {
+                if (listOfFile.isFile())
+                {
                     try {
                         FileInputStream fileIn = new FileInputStream(listOfFile);
                         ObjectInputStream in = new ObjectInputStream(fileIn);
