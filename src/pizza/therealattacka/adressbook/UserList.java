@@ -34,8 +34,6 @@ public class UserList {
             String firstLower = cont.GetFirstName().toLowerCase();
             String lastLower = cont.GetLastName().toLowerCase();
 
-            boolean fail=true;
-
             if (firstLower.startsWith(input1) || lastLower.startsWith(input1))
             {
                 System.out.println(cont);
