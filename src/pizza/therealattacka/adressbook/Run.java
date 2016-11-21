@@ -10,16 +10,16 @@ public class Run {
         app.run();
     }
 
-    public void run()
+    private void run()
     {
         UserList list = new UserList();
-        String saveFile = "Contacts.atf";
+        String saveDir = "Contacts";
 
-        list.LoadUserList(saveFile);
+        list.LoadUserList(saveDir);
         CommandInput input = new CommandInput();
         boolean doExit = false;
 
-        while (doExit==false)
+        while (!doExit)
         {
             boolean success = input.ExecuteCommands(list);
 
@@ -30,7 +30,7 @@ public class Run {
         }
 
 
-        list.SaveUserList(saveFile);
+        list.SaveUserList(saveDir);
 
     }
 

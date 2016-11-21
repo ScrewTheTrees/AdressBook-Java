@@ -7,6 +7,8 @@ import java.util.ArrayList;
 public class UserList {
     private ArrayList<Contact> userList = new ArrayList<>();
 
+
+
     public Contact add(String firstName, String lastName, String eMail) {
 
         Contact cont = new Contact(firstName, lastName, eMail);
@@ -17,23 +19,19 @@ public class UserList {
 
     public void listAllUsers()
     {
-        for (int i=0; i<userList.size(); i++){
-            System.out.println(userList.get(i));
+        for (Contact anUserList : userList) {
+            System.out.println(anUserList);
         }
     }
 
 
     public void printSearch(String input1)
     {
-        for (int i=0; i<userList.size(); i++){
-            Contact cont = userList.get(i);
+        for (Contact cont : userList) {
             String firstLower = cont.GetFirstName().toLowerCase();
             String lastLower = cont.GetLastName().toLowerCase();
 
-            boolean fail=true;
-
-            if (firstLower.startsWith(input1) || lastLower.startsWith(input1))
-            {
+            if (firstLower.startsWith(input1) || lastLower.startsWith(input1)) {
                 System.out.println(cont);
             }
 
@@ -42,51 +40,53 @@ public class UserList {
 
     public void SaveUserList(String dir)
     {
+        File folder = new File("Contacts");
+        if (!folder.exists()) {
+            folder.mkdir();
+        }
+
         try {
-            PrintStream print = new PrintStream(new File(dir));
-
-            print.println(userList.size());
-
-            for (int i=0; i<userList.size(); i++) {
-                Contact cont = userList.get(i);
-                String prstr = cont.GetStringSimple();
-                print.println(prstr);
-
-
+            for (int i = 0; i < userList.size(); i++) {
+                FileOutputStream fileOut = new FileOutputStream(dir+"/"+i+".cont");
+                ObjectOutputStream out = new ObjectOutputStream(fileOut);
+                out.writeObject(userList.get(i));
+                out.close();
+                fileOut.close();
             }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
+        }catch(IOException i) {
+            i.printStackTrace();
         }
     }
 
 
     public void LoadUserList(String dir) {
-        File f = new File(dir);
 
-        if (f.exists()) {
-            try {
-                BufferedReader br = new BufferedReader(new FileReader(dir));
+        File folder = new File(dir);
 
-                int entries = Integer.parseInt(br.readLine());
+        if (folder.exists()) {
 
+            File[] listOfFiles = folder.listFiles();
 
-                for (int i = 0; i < entries; i++) {
-                    String curr = br.readLine();
+            for (File listOfFile : listOfFiles) {
+                if (listOfFile.isFile()) {
+                    try {
+                        FileInputStream fileIn = new FileInputStream(listOfFile);
+                        ObjectInputStream in = new ObjectInputStream(fileIn);
+                        Contact cont = (Contact) in.readObject();
+                        userList.add(cont);
+                        in.close();
+                        fileIn.close();
 
-                    String[] splitted = curr.split(" ");
-                    Contact cont = add(splitted[1], splitted[2], splitted[3]);
-                    cont.SetUUID(splitted[0]);
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
-
-                br.close();
-
-
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
             }
         }
+
     }
 }

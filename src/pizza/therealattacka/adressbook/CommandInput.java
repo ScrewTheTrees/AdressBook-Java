@@ -9,14 +9,8 @@ public class CommandInput {
 
     public boolean ExecuteCommands(UserList list)
     {
-        boolean success = false;
+        boolean success;
 
-
-        System.out.println("Input your desired command: " +
-                "\nadd FirstName LastName EMail" +
-                "\nlist" +
-                "\nsearch Query" +
-                "\nquit");
 
         String input = sc.nextLine();
 
@@ -27,11 +21,6 @@ public class CommandInput {
             case "add":
                 if (inputParts.length>=4) {
                     list.add(inputParts[1],inputParts[2],inputParts[3]);
-                    //System.out.println("Successfully added!\n");
-
-                }
-                else {
-                    //System.out.println("It appears you did not add enough arguments, please try again.\n");
                 }
                 success = true;
                 break;

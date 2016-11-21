@@ -1,9 +1,11 @@
 package pizza.therealattacka.adressbook;
 
+
+import java.io.Serializable;
 import java.util.UUID;
 
 
-public class Contact {
+public class Contact implements Serializable {
     private String firstName;
     private String lastName;
     private String eMail;
@@ -25,14 +27,10 @@ public class Contact {
         return ("UUID: "+ID+"\nFirst name: "+firstName+"\nLast name: "+lastName+"\nE-Mail: "+eMail+"\n");
     }
 
-    public String GetStringSimple()
-    {
-        return (ID+" "+GetFirstName()+" "+GetLastName()+" "+GetEMail());
-    }
-
     //Getter Setters
     public String GetFirstName() { return this.firstName; }
     public String GetLastName() { return this.lastName; }
     public String GetEMail() { return this.eMail; }
-    public void SetUUID(String uuid) {ID = UUID.fromString(uuid);}
+
+
 }
