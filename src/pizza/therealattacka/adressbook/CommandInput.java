@@ -3,13 +3,13 @@ package pizza.therealattacka.adressbook;
 import java.util.Scanner;
 
 
-public class CommandInput {
+class CommandInput {
 
     private Scanner sc = new Scanner(System.in);
 
-    public boolean ExecuteCommands(UserList list)
+    boolean ExecuteCommands(ContactList list)
     {
-        boolean success;
+        boolean keepRunning;
 
 
         String input = sc.nextLine();
@@ -19,43 +19,47 @@ public class CommandInput {
         switch (inputParts[0].toLowerCase())
         {
             case "help":
-                CommandHelp(inputParts,list);
-                success = true;
+                CommandHelp();
+                if (inputParts.length>=2) System.out.println("Arguments not required for 'help' command: "+(inputParts.length-1) );
+                keepRunning = true;
                 break;
 
             case "add":
                 CommandAdd(inputParts,list);
-                success = true;
+                keepRunning = true;
                 break;
 
             case "list":
                 list.listAllUsers();
-                success = true;
+                keepRunning = true;
                 System.out.println("All users have been listed.");
+                if (inputParts.length>=2) System.out.println("Arguments not required for 'list' command: "+(inputParts.length-1) );
                 break;
 
             case "search":
                 CommandSearch(inputParts,list);
-                success = true;
+                keepRunning = true;
                 break;
 
             case "delete":
                 CommandDelete(inputParts,list);
-                success = true;
+                keepRunning = true;
                 break;
 
             case "quit":
-                success = false;
+                keepRunning = false;
                 System.out.println("Quitting application.");
+                if (inputParts.length>=2) System.out.println("Arguments not required for 'quit' command: "+(inputParts.length-1) );
+                sc.close();
                 break;
 
             default:
-                success = true; //Since we use quit to exit application
+                keepRunning = true; //Since we use quit to exit application
                 System.out.println("Unrecognized command: "+inputParts[0]+"\n");
                 break;
         }
 
-        return success;
+        return keepRunning;
     }
 
 
@@ -64,7 +68,7 @@ public class CommandInput {
 
 
     //Commands:
-    private void CommandHelp(String[] inputParts, UserList list)
+    private void CommandHelp()
     {
         System.out.println("help        Show this screen.");
         System.out.println("add         Adds new Contact with arguments (FirstName,LastName,EMail).");
@@ -73,30 +77,29 @@ public class CommandInput {
         System.out.println("delete      Deletes a Contact using the UUID defined in argument.");
         System.out.println("quit        Saves all Contacts, and exits this application.");
 
-        if (inputParts.length>=2) System.out.println("Arguments not required for help command: "+(inputParts.length-1) );
     }
 
-    private void CommandSearch(String[] inputParts, UserList list)
+    private void CommandSearch(String[] inputParts, ContactList list)
     {
         if (inputParts.length>=2)
             list.printSearch(inputParts[1]);
-        else System.out.println("Wrong amount of arguments for Search: "+(inputParts.length-1) );
+        if (inputParts.length!=2) System.out.println("Wrong amount of arguments for 'search': "+(inputParts.length-1) );
     }
 
-    private void CommandDelete(String[] inputParts, UserList list)
+    private void CommandDelete(String[] inputParts, ContactList list)
     {
         if (inputParts.length>=2)
             list.removeUserUUID(inputParts[1]);
-        else System.out.println("Wrong amount of arguments for Delete: "+(inputParts.length-1) );
+        if (inputParts.length!=2) System.out.println("Wrong amount of arguments for 'delete': "+(inputParts.length-1) );
     }
 
-    private void CommandAdd(String[] inputParts, UserList list)
+    private void CommandAdd(String[] inputParts, ContactList list)
     {
-        if (inputParts.length>=4) {
+        if (inputParts.length==4) {
             list.add(inputParts[1],inputParts[2],inputParts[3]);
             System.out.println("Contact has been successfully added!");
         }
-        else System.out.println("Wrong amount of arguments for add: "+(inputParts.length-1) );
+        if (inputParts.length!=4) System.out.println("Wrong amount of arguments for 'add': "+(inputParts.length-1) );
     }
 
 

@@ -5,14 +5,14 @@ import java.io.Serializable;
 import java.util.UUID;
 
 
-public class Contact implements Serializable {
+class Contact implements Serializable {
     private String firstName;
     private String lastName;
     private String eMail;
     private UUID ID;
 
 
-    public Contact(String firstName, String lastName, String eMail)
+    Contact(String firstName, String lastName, String eMail)
     {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -28,9 +28,9 @@ public class Contact implements Serializable {
     }
 
     //Getter Setters
-    public String GetFirstName() { return this.firstName; }
-    public String GetLastName() { return this.lastName; }
-    public String GetUUID() { return this.ID.toString(); }
+    String GetFirstName() { return this.firstName; }
+    String GetLastName() { return this.lastName; }
+    String GetUUID() { return this.ID.toString(); }
 
 
 }

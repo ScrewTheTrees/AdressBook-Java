@@ -4,11 +4,12 @@ import java.io.*;
 import java.util.ArrayList;
 
 
-public class UserList {
+class ContactList {
     private ArrayList<Contact> userList = new ArrayList<>();
 
 
-    public Contact add(String firstName, String lastName, String eMail) {
+
+    Contact add(String firstName, String lastName, String eMail) {
 
 
         Contact cont = new Contact(firstName, lastName, eMail);
@@ -18,41 +19,36 @@ public class UserList {
 
     }
 
-    public void listAllUsers()
+    void listAllUsers()
     {
-        for (int i=0; i<userList.size(); i++) {
-            System.out.println(userList.get(i));
-        }
+        userList.forEach(System.out::println);
     }
 
 
-    public void printSearch(String input1)
+    void printSearch(String input1)
     {
         int num = 0;
 
-        for (int i=0; i<userList.size(); i++)
-        {
-            Contact cont = userList.get(i);
+        for (Contact cont : userList) {
             String firstLower = cont.GetFirstName().toLowerCase();
             String lastLower = cont.GetLastName().toLowerCase();
 
-            if (firstLower.startsWith(input1) || lastLower.startsWith(input1))
-            {
+            if (firstLower.startsWith(input1) || lastLower.startsWith(input1)) {
                 System.out.println(cont);
-                num+=1;
+                num += 1;
             }
         }
         System.out.println(num+" Contacts has been found by the query: "+input1);
     }
 
-    public void SaveUserList(String dir)
+    void SaveUserList(String dir)
     {
         CleanUserList(dir);
 
         File folder = new File(dir);
         if (!folder.exists())
         {
-            folder.mkdir();
+            boolean temp = folder.mkdir();
         }
 
         try {
@@ -69,7 +65,7 @@ public class UserList {
         }
     }
 
-    public void removeUserUUID(String checkID)
+    void removeUserUUID(String checkID)
     {
         boolean deleted=false;
         for (int i = 0; i < userList.size(); i++)
@@ -82,11 +78,11 @@ public class UserList {
                 deleted=true;
             }
         }
-        if (deleted==false)
+        if (!deleted)
             System.out.println("No user found with the UUID: "+checkID);
     }
 
-    public void LoadUserList(String dir)
+    void LoadUserList(String dir)
     {
 
         File folder = new File(dir);
@@ -95,10 +91,8 @@ public class UserList {
         {
             File[] listOfFiles = folder.listFiles();
 
-            for (File listOfFile : listOfFiles)
-            {
-                if (listOfFile.isFile())
-                {
+            for (File listOfFile : listOfFiles) {
+                if (listOfFile.isFile()) {
                     try {
                         FileInputStream fileIn = new FileInputStream(listOfFile);
                         ObjectInputStream in = new ObjectInputStream(fileIn);
@@ -107,18 +101,14 @@ public class UserList {
                         in.close();
                         fileIn.close();
 
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (ClassNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
+                    } catch (ClassNotFoundException | IOException e) {
                         e.printStackTrace();
                     }
                 }
             }
         }
     }
-    public void CleanUserList(String dir)
+    void CleanUserList(String dir)
     {
         File folder = new File(dir);
 

@@ -1,12 +1,8 @@
 package pizza.therealattacka.adressbook;
 
 
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
-
 /**
-* @Author fredrik grimmenhag.
+* @author fredrik grimmenhag.
 */
 public class Run {
 
@@ -18,7 +14,7 @@ public class Run {
 
     private void run()
     {
-        UserList list = new UserList();
+        ContactList list = new ContactList();
         CommandInput input = new CommandInput();
         String saveDir = "Contacts";
         boolean doExit = false;
@@ -29,7 +25,7 @@ public class Run {
 
 
 
-
+        System.out.println("Welcome, type 'help' to get started.");
         while (!doExit)
         {
             boolean success = input.ExecuteCommands(list);
