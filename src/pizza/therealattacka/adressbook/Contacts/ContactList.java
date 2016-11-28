@@ -1,13 +1,13 @@
 package pizza.therealattacka.adressbook.Contacts;
 
-import pizza.therealattacka.adressbook.LogHandler;
-
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.logging.Logger;
 
 
 public class ContactList {
     private ArrayList<Contact> contactList = new ArrayList<>();
-
+    private static final Logger log = Logger.getLogger( ContactList.class.getName() );
 
 
     public Contact add(String firstName, String lastName, String eMail)
@@ -15,18 +15,23 @@ public class ContactList {
 
         Contact cont = new Contact(firstName, lastName, eMail);
 
-        LogHandler.LogFine("Added Contact to contact list.");
+        log.fine("Added Contact to contact list.");
         contactList.add(cont);
         return cont;
 
     }
-    public void add(Contact cont) {
+    public Contact add(Contact cont) {
 
-        LogHandler.LogFine("Added Contact to contact list.");
+        log.fine("Added Contact to contact list.");
         contactList.add(cont);
-
+        return cont;
     }
 
+    public static ArrayList<Contact> sort(ArrayList<Contact> list)
+    {
+        Collections.sort(list, (s1, s2) -> s1.GetFirstName().compareToIgnoreCase(s2.GetFirstName()));
+        return list;
+    }
 
     public ArrayList<Contact> getArrayList()
     {

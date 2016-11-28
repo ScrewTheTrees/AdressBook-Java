@@ -3,11 +3,14 @@ package pizza.therealattacka.adressbook;
 import pizza.therealattacka.adressbook.Contacts.ContactList;
 import pizza.therealattacka.adressbook.Contacts.ContactSaveHandler;
 
+import java.util.logging.Logger;
+
 /**
  * Created by Fredrik Grimmenhag on 2016-11-28.
  */
 public class AutoSave extends Thread  {
 
+    private static final Logger log = Logger.getLogger( AutoSave.class.getName() );
     private ContactList list;
     private String dir;
     private boolean running = true;
@@ -28,14 +31,14 @@ public class AutoSave extends Thread  {
 
             } catch (InterruptedException e) {
                 e.printStackTrace();
-                LogHandler.LogSevere(e.getStackTrace().toString());
+                log.severe(e.getStackTrace().toString());
             }
 
             ContactSaveHandler.SaveUserList(dir,list);
-            LogHandler.LogInfo("AutoSave has saved the userList.");
+            log.info("AutoSave has saved the userList.");
 
         }
-        LogHandler.LogInfo("AutoSave thread has stopped.");
+        log.info("AutoSave thread has stopped.");
         return; //Simple way of ending a thread in the run() method
     }
 

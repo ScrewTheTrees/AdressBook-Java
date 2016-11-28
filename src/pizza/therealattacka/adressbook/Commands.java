@@ -3,15 +3,19 @@ package pizza.therealattacka.adressbook;
 
 import pizza.therealattacka.adressbook.Contacts.Contact;
 import pizza.therealattacka.adressbook.Contacts.ContactList;
+import pizza.therealattacka.adressbook.Contacts.ContactSaveHandler;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.logging.Logger;
 
 /**
  * Created by Fredrik Grimmenhag on 2016-11-28.
  */
 public class Commands {
+
+    private static final Logger log = Logger.getLogger( Commands.class.getName() );
 
     //Commands:
     static synchronized void CommandHelp(String[] inputParts)
@@ -25,7 +29,7 @@ public class Commands {
         System.out.println("delete      Deletes a Contacts using the UUID defined in argument.");
         System.out.println("quit        Saves all Contacts, and exits this application.");
 
-        LogHandler.LogFine("User Commando: list");
+        log.fine("User Commando: list");
     }
 
     static synchronized void CommandList(String[] inputParts, ContactList list) {
@@ -35,7 +39,7 @@ public class Commands {
             newArr.add(cont);
         }
 
-        sort(newArr);
+        ContactList.sort(newArr);
         for (Contact cont : newArr) {
             System.out.println(cont.getContactInfoFormatted());
 
@@ -43,8 +47,8 @@ public class Commands {
             System.out.println("All users have been listed.");
             if (inputParts.length >= 2)
                 System.out.println("Arguments not required for 'list' command: " + (inputParts.length - 1));
-            LogHandler.LogFine("User Commando: list");
         }
+        log.fine("User Commando: list");
     }
 
 
@@ -63,7 +67,7 @@ public class Commands {
                     num += 1;
                 }
             }
-            sort(newArr);
+            ContactList.sort(newArr);
             for (Contact cont : newArr) {
                 System.out.println(cont.getContactInfoFormatted());
 
@@ -71,9 +75,8 @@ public class Commands {
             }
             if (inputParts.length != 2)
                 System.out.println("Wrong amount of arguments for 'search': " + (inputParts.length - 1));
-
-            LogHandler.LogFine("User Commando: search");
         }
+        log.fine("User Commando: search");
     }
 
 
@@ -97,7 +100,7 @@ public class Commands {
         }
         if (inputParts.length!=2) System.out.println("Wrong amount of arguments for 'delete': "+(inputParts.length-1) );
 
-        LogHandler.LogFine("User Commando: delete");
+        log.fine("User Commando: delete");
     }
 
     static synchronized void  CommandAdd(String[] inputParts, ContactList list)
@@ -108,7 +111,7 @@ public class Commands {
         }
         if (inputParts.length!=4) System.out.println("Wrong amount of arguments for 'add': "+(inputParts.length-1) );
 
-        LogHandler.LogFine("User Commando: add");
+        log.fine("User Commando: add");
     }
 
     static synchronized void CommandQuit(String[] inputParts)
@@ -116,21 +119,13 @@ public class Commands {
         System.out.println("Quitting application.");
         if (inputParts.length>=2) System.out.println("Arguments not required for 'quit' command: "+(inputParts.length-1) );
 
-        LogHandler.LogFine("User Commando: quit");
+        log.fine("User Commando: quit");
     }
 
     static synchronized void CommandNone(String[] inputParts)
     {
         System.out.println("Unrecognized command: "+inputParts[0]+"\n");
-        LogHandler.LogFine("Unknown User Commando: "+inputParts[0]);
-    }
-
-
-
-    public static ArrayList<Contact> sort(ArrayList<Contact> list)
-    {
-        Collections.sort(list, (s1, s2) -> s1.GetFirstName().compareToIgnoreCase(s2.GetFirstName()));
-        return list;
+        log.fine("Unknown User Commando: "+inputParts[0]);
     }
 
 

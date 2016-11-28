@@ -2,19 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d95021-864c-41cb-b38f-8ad987fe512f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/AutoSave.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Commands.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/LogHandler.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Contact.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/ContactList.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/ContactList.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contact.java" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/Contact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/CommandInput.class" afterPath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/CommandInput.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logging.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ContactList.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ContactList.log.1" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ContactList.log.1.lck" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ContactList.log.2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Commands$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/LogHandler.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/LogHandler.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/AutoSave.class" afterPath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/AutoSave.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Commands.class" afterPath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Commands.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Contacts/ContactList.class" afterPath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Contacts/ContactList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.class" afterPath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Run.class" afterPath="$PROJECT_DIR$/out/production/AdressBook/pizza/therealattacka/adressbook/Run.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/CommandInput.java" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/CommandInput.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/AutoSave.java" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/AutoSave.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Commands.java" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Commands.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactList.java" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.java" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Run.java" afterPath="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Run.java" />
     </list>
     <ignored path="AdressBook.iws" />
@@ -37,47 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Run.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Run.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LogHandler.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/LogHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactList.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ContactList.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Commands.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Commands.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -112,18 +81,20 @@
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/UserList.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contact.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/ContactList.java" />
-        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Run.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/ContactSaveHandler.java" />
-        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/AutoSave.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/CommandInput.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contact/Contact.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contact/ContactList.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contact/ContactSaveHandler.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/Contact.java" />
-        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/LogHandler.java" />
-        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactList.java" />
+        <option value="$PROJECT_DIR$/logging.properties" />
+        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/IOExxception.java" />
+        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/AutoSave.java" />
+        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Run.java" />
+        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.java" />
         <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Commands.java" />
+        <option value="$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactList.java" />
       </list>
     </option>
   </component>
@@ -163,6 +134,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -224,8 +197,6 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,6 +205,11 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Fredrik Grimmenhag/IdeaProjects/AdressBook/src/pizza/therealattacka/adressbook/Contact.java" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pizza.therealattacka.adressbook" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Run">
     <configuration default="false" name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -698,12 +674,13 @@
       <workItem from="1479984168322" duration="265000" />
       <workItem from="1479984448173" duration="420000" />
       <workItem from="1479988103536" duration="1877000" />
-      <workItem from="1480320729599" duration="8703000" />
+      <workItem from="1480320729599" duration="8859000" />
+      <workItem from="1480330813816" duration="1490000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35757000" />
+    <option name="totallyTimeSpent" value="37403000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1178" height="1087" extended-state="0" />
@@ -716,8 +693,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30194473" sideWeight="0.3298872" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30194473" sideWeight="0.6701128" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -727,8 +704,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1130,7 +1107,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1139,6 +1115,87 @@
         <state relative-caret-position="-54">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/util/Comparator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/IOExxception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/LogHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/CommandInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Run.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Commands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-457">
+          <caret line="76" column="105" selection-start-line="76" selection-start-column="105" selection-end-line="76" selection-end-column="105" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/AutoSave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1152,78 +1209,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactSaveHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="787">
-          <caret line="93" column="4" selection-start-line="93" selection-start-column="4" selection-end-line="93" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/AutoSave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="36" selection-start-line="33" selection-start-column="36" selection-end-line="33" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/CommandInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Run.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/LogHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Contacts/ContactList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="27" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/jre/lib/rt.jar!/java/util/Comparator.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pizza/therealattacka/adressbook/Commands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state relative-caret-position="476">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

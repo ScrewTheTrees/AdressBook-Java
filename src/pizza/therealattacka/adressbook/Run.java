@@ -4,10 +4,26 @@ package pizza.therealattacka.adressbook;
 import pizza.therealattacka.adressbook.Contacts.ContactList;
 import pizza.therealattacka.adressbook.Contacts.ContactSaveHandler;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
+
 /**
 * @author fredrik grimmenhag.
 */
 public class Run {
+    private static final Logger log = Logger.getLogger( Run.class.getName() );
+
+    private static void setupLogging() {
+        String loggingFilePath = "logging.properties";
+        try (FileInputStream fileInputStream = new FileInputStream(loggingFilePath)) {
+            LogManager.getLogManager().readConfiguration(fileInputStream);
+        } catch (IOException e) {
+            throw new RuntimeException("Could not load log properties", e);
+        }
+    }
+
 
     public static void main(String[] args)
     {
@@ -21,9 +37,9 @@ public class Run {
         CommandInput input = new CommandInput();
         String saveDir = "Contacts";
         boolean doExit = false;
-        LogHandler.LogCreate();
+        setupLogging();
 
-        LogHandler.LogInfo("Application has Successfully started");
+        log.info("Application has Successfully started");
 
         ContactSaveHandler.LoadUserList(saveDir,list);
 
@@ -44,7 +60,7 @@ public class Run {
                 doExit = true;
             }
         }
-        LogHandler.LogInfo("Application has started closing, waiting for savethread to finish.");
+        log.info("Application has started closing, waiting for savethread to finish.");
 
         save.quitThread();
 

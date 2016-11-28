@@ -1,15 +1,16 @@
 package pizza.therealattacka.adressbook.Contacts;
 
 
-import pizza.therealattacka.adressbook.LogHandler;
-
 import java.io.*;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 /**
  * Created by Fredrik Grimmenhag on 2016-11-28.
  */
 public class ContactSaveHandler {
+
+    private static final Logger log = Logger.getLogger( ContactSaveHandler.class.getName() );
 
     public static void SaveUserList(String dir, ContactList contactList)
     {
@@ -34,7 +35,7 @@ public class ContactSaveHandler {
 
             } catch (IOException e) {
                 e.printStackTrace();
-                LogHandler.LogSevere(e.getStackTrace().toString());
+                log.severe(e.getStackTrace().toString());
             }
 
             try {
@@ -42,10 +43,10 @@ public class ContactSaveHandler {
                 fileOut.close();
             } catch (IOException e) {
                 e.printStackTrace();
-                LogHandler.LogSevere(e.getStackTrace().toString());
+                log.severe(e.getStackTrace().toString());
             }
         }
-        LogHandler.LogInfo("ContactList has been saved to: "+dir);
+        log.info("ContactList has been saved to: "+dir);
 
     }
 
@@ -72,7 +73,7 @@ public class ContactSaveHandler {
 
                     } catch (ClassNotFoundException | IOException e) {
                         e.printStackTrace();
-                        LogHandler.LogSevere(e.getStackTrace().toString());
+                        log.severe(e.getStackTrace().toString());
                     }
 
 
@@ -81,14 +82,14 @@ public class ContactSaveHandler {
                         in.close();
                     } catch (IOException e) {
                         e.printStackTrace();
-                        LogHandler.LogSevere(e.getStackTrace().toString());
+                        log.severe(e.getStackTrace().toString());
                     }
 
 
                 }
             }
         }
-        LogHandler.LogInfo("ContactList has been loaded from: "+dir);
+        log.info("ContactList has been loaded from: "+dir);
     }
 
     static void CleanUserList(String dir)
@@ -106,7 +107,7 @@ public class ContactSaveHandler {
             }
 
         }
-        LogHandler.LogInfo("Cleaning up old saved Serialized files inside: "+dir);
+        log.info("Cleaning up old saved Serialized files inside: "+dir);
     }
 
 
