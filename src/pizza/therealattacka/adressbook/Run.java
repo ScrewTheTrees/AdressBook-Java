@@ -1,6 +1,9 @@
 package pizza.therealattacka.adressbook;
 
 
+import pizza.therealattacka.adressbook.Contacts.ContactList;
+import pizza.therealattacka.adressbook.Contacts.ContactSaveHandler;
+
 /**
 * @author fredrik grimmenhag.
 */
@@ -18,10 +21,16 @@ public class Run {
         CommandInput input = new CommandInput();
         String saveDir = "Contacts";
         boolean doExit = false;
+        LogHandler.LogCreate();
 
-        list.LoadUserList(saveDir);
+        LogHandler.LogInfo("Application has Successfully started");
 
+        ContactSaveHandler.LoadUserList(saveDir,list);
 
+        AutoSave save = new AutoSave(list,saveDir);
+        save.start();
+
+        ContactSaveHandler.SaveUserList(saveDir,list);
 
 
 
@@ -35,8 +44,10 @@ public class Run {
                 doExit = true;
             }
         }
+        LogHandler.LogInfo("Application has started closing, waiting for savethread to finish.");
 
-        list.SaveUserList(saveDir);
+        save.quitThread();
+
 
     }
 
