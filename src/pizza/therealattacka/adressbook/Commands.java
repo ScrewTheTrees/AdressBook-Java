@@ -149,11 +149,6 @@ class Commands {
         log.fine("User Commando: quit");
     }
 
-    static synchronized void commandNone(String[] inputParts)
-    {
-        System.out.println("Unrecognized command: "+inputParts[0]+"\n");
-        log.fine("Unknown User Commando: "+inputParts[0]);
-    }
 
 
 

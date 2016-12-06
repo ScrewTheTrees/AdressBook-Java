@@ -1,12 +1,17 @@
-2016-12-06 09:54:05 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler loadUserList - ContactList has been loaded from: Contacts
-2016-12-06 09:54:05 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler cleanUserList - Cleaning up old saved Serialized files inside: Contacts
-2016-12-06 09:54:05 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler saveUserList - ContactList has been saved to: Contacts
-2016-12-06 09:54:05 INFO   pizza.therealattacka.adressbook.AutoSave run - AutoSave has saved the userList.
-2016-12-06 09:54:05 FINE   pizza.therealattacka.adressbook.RemoteList.RemoteListRetrieve run - Samuel Sandgren has successfully been added to local list.
-2016-12-06 09:54:05 FINE   pizza.therealattacka.adressbook.RemoteList.RemoteListRetrieve run - Fredrik Grimmenhag has successfully been added to local list.
-2016-12-06 09:54:06 FINE   pizza.therealattacka.adressbook.CommandInput executeCommands - Command Executed: list
-2016-12-06 09:54:06 FINE   pizza.therealattacka.adressbook.Commands commandList - User Commando: list
-2016-12-06 09:54:08 FINE   pizza.therealattacka.adressbook.CommandInput executeCommands - Command Executed: quit
-2016-12-06 09:54:08 FINE   pizza.therealattacka.adressbook.Commands commandQuit - User Commando: quit
-2016-12-06 09:54:08 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler cleanUserList - Cleaning up old saved Serialized files inside: Contacts
-2016-12-06 09:54:08 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler saveUserList - ContactList has been saved to: Contacts
+2016-12-06 10:40:25 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler loadUserList - ContactList has been loaded from: Contacts
+2016-12-06 10:40:26 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler cleanUserList - Cleaning up old saved Serialized files inside: Contacts
+2016-12-06 10:40:26 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler saveUserList - ContactList has been saved to: Contacts
+2016-12-06 10:40:26 INFO   pizza.therealattacka.adressbook.AutoSave run - AutoSave has saved the userList.
+2016-12-06 10:40:26 FINE   pizza.therealattacka.adressbook.RemoteList.RemoteListRetrieve run - Samuel Sandgren has successfully been added to local list.
+2016-12-06 10:40:26 FINE   pizza.therealattacka.adressbook.RemoteList.RemoteListRetrieve run - Samuel Sandgren has successfully been added to local list.
+2016-12-06 10:40:26 FINE   pizza.therealattacka.adressbook.RemoteList.RemoteListRetrieve run - Fredrik Grimmenhag has successfully been added to local list.
+2016-12-06 10:40:26 FINE   pizza.therealattacka.adressbook.RemoteList.RemoteListRetrieve run - Fredrik Grimmenhag has successfully been added to local list.
+2016-12-06 10:40:28 FINE   pizza.therealattacka.adressbook.CommandInput executeCommands - Command Executed: list
+2016-12-06 10:40:28 FINE   pizza.therealattacka.adressbook.Commands commandList - User Commando: list
+2016-12-06 10:40:31 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler cleanUserList - Cleaning up old saved Serialized files inside: Contacts
+2016-12-06 10:40:31 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler saveUserList - ContactList has been saved to: Contacts
+2016-12-06 10:40:31 INFO   pizza.therealattacka.adressbook.AutoSave run - AutoSave has saved the userList.
+2016-12-06 10:40:33 FINE   pizza.therealattacka.adressbook.CommandInput executeCommands - Command Executed: quit
+2016-12-06 10:40:33 FINE   pizza.therealattacka.adressbook.Commands commandQuit - User Commando: quit
+2016-12-06 10:40:33 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler cleanUserList - Cleaning up old saved Serialized files inside: Contacts
+2016-12-06 10:40:33 INFO   pizza.therealattacka.adressbook.Contacts.ContactSaveHandler saveUserList - ContactList has been saved to: Contacts

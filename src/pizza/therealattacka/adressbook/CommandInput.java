@@ -54,7 +54,8 @@ class CommandInput {
                 break;
 
             default:
-                Commands.commandNone(inputParts);
+                System.out.println("Unrecognized command: "+input+"\n");
+                log.fine("Unknown User Commando: "+input);
 
                 break;
         }

@@ -14,9 +14,10 @@ public class RemoteList {
 
     public void start()
     {
-        //Add more servers here to load from more sources
         Thread remotesServer1 = new Thread(new RemoteListRetrieve("127.0.0.1",61616));
         remotesServer1.start();
+        Thread remotesServer2 = new Thread(new RemoteListRetrieve("127.0.0.1",61616));
+        remotesServer2.start();
 
 
     }

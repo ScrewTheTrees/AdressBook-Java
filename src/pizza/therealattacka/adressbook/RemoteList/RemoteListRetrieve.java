@@ -30,7 +30,9 @@ public class RemoteListRetrieve implements Runnable {
         this.port=port;
     }
 
-
+    /**
+     * Spaghetti Code (God try/catch statements take a lot of space).
+     */
     @Override
     public void run() {
 
@@ -52,10 +54,19 @@ public class RemoteListRetrieve implements Runnable {
             } catch (IOException e) {
                 log.warning(e.getMessage());
             }
-        }
+
             out.println("getall");
 
             while (running) {
+
+                if (!socket.isConnected())
+
+                    try {
+                        socket.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
                 if (socket.isClosed()) {
                     try {
                         out.close();
@@ -63,12 +74,14 @@ public class RemoteListRetrieve implements Runnable {
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
+
                     running = false;
                     return;
                 }
 
+
                 try {
-                    if (in.ready() && socket.isConnected()) {
+                    if (in.ready()) {
 
                         String input = in.readLine();
 
@@ -76,6 +89,9 @@ public class RemoteListRetrieve implements Runnable {
                         if (inputParts[0].compareTo("endln") == 0) {
                             out.println("exit");
                             socket.close();
+                            //Do not know how keepAlive works with Java, as in does it send the last message effectively before disconnect like many other languages?
+                            //Cannot test unless i simulate unstable connection or bring in another PC, which i do not currently have on hand.
+
                         } else {
                             log.fine(inputParts[1]+" "+inputParts[2]+" has successfully been added to local list.");
                             RemoteList.add(new Contact(inputParts[1], inputParts[2], inputParts[3], inputParts[0]));
@@ -87,6 +103,10 @@ public class RemoteListRetrieve implements Runnable {
                 }
 
             }
-
+        }
+        else
+        {
+            return;
+        }
     }
 }
