@@ -12,13 +12,14 @@ public class ContactSaveHandler {
 
     private static final Logger log = Logger.getLogger( ContactSaveHandler.class.getName() );
 
-    public static void SaveUserList(String dir, ContactList contactList)
+    public static synchronized void saveUserList(String dir, ContactList contactList)
     {
-        CleanUserList(dir);
+        cleanUserList(dir);
 
         ArrayList<Contact> list = contactList.getArrayList();
 
         File folder = new File(dir);
+
         if (!folder.exists())
         {
             folder.mkdir();
@@ -31,7 +32,6 @@ public class ContactSaveHandler {
                 fileOut = new FileOutputStream(dir + "/" + i + ".cont");
                 out = new ObjectOutputStream(fileOut);
                 out.writeObject(list.get(i));
-
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -50,7 +50,7 @@ public class ContactSaveHandler {
 
     }
 
-    public static void LoadUserList(String dir, ContactList list)
+    public static synchronized void loadUserList(String dir, ContactList list)
     {
 
         File folder = new File(dir);
@@ -67,10 +67,7 @@ public class ContactSaveHandler {
                     try {
                         fileIn = new FileInputStream(listOfFile);
                         in = new ObjectInputStream(fileIn);
-                        Contact cont = (Contact) in.readObject();
-                        list.add(cont);
-
-
+                        list.add( (Contact) in.readObject() );
                     } catch (ClassNotFoundException | IOException e) {
                         e.printStackTrace();
                         log.severe(e.getStackTrace().toString());
@@ -92,7 +89,7 @@ public class ContactSaveHandler {
         log.info("ContactList has been loaded from: "+dir);
     }
 
-    static void CleanUserList(String dir)
+    private static void cleanUserList(String dir)
     {
         File folder = new File(dir);
 

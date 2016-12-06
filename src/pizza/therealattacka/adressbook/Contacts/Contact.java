@@ -11,7 +11,7 @@ public class Contact implements Serializable {
     private String firstName;
     private String lastName;
     private String eMail;
-    private UUID ID;
+    private String ID;
 
 
     public Contact(String firstName, String lastName, String eMail)
@@ -19,20 +19,23 @@ public class Contact implements Serializable {
         this.firstName = firstName;
         this.lastName = lastName;
         this.eMail = eMail;
-        this.ID = UUID.randomUUID();    //Assign ID
+        this.ID = UUID.randomUUID().toString();    //Assign ID
 
     }
-
-    public String getContactInfoFormatted()
+    public Contact(String firstName, String lastName, String eMail, String uuid)
     {
-        return ("UUID: "+ID+"\nFirst name: "+firstName+"\nLast name: "+lastName+"\nE-Mail: "+eMail+"\n");
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.eMail = eMail;
+        this.ID = uuid;    //Assign ID
+
     }
 
     //Getter Setters
-    public String GetFirstName() { return this.firstName; }
-    public String GetLastName() { return this.lastName; }
-    public String GetEMailName() { return this.eMail; }
-    public String GetUUID() { return this.ID.toString(); }
+    public String getFirstName() { return this.firstName; }
+    public String getLastName() { return this.lastName; }
+    public String getEMailName() { return this.eMail; }
+    public String getUUID() { return this.ID; }
 
 
 }
